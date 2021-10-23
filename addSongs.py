@@ -15,16 +15,17 @@ CLIENT_USERNAME = "18xwy2dfk7j0v61oyhj9b8csa"
 token = util.prompt_for_user_token(CLIENT_USERNAME,scope,client_id=CLIENT_ID,client_secret=CLIENT_SECRET,redirect_uri=SPOTIPY_REDIRECT_URI) 
 sp = spotipy.Spotify(auth=token)
 
-playlist_name = "randoPlaylist"
-# sp.user_playlist_create(CLIENT_USERNAME, name=playlist_name)
 songs = ["0Tfxvck4aXsRXffYakDzmF","6eT7xZZlB2mwyzJ2sUKG6w","0RRm4OS5ymfZryXBuj0G2m","2hloaUoRonYssMuqLCBLTX","3UrNOHCzVxX2KZbNcKQAyu"]
 
 ids = []
 names = []
 for i in range(len(sp.user_playlists(CLIENT_USERNAME)["items"])):
     ids.append(sp.user_playlists(CLIENT_USERNAME)["items"][i]["id"])
-    names.append(sp.user_playlists(CLIENT_USERNAME)["items"][1]["name"])
+    names.append(sp.user_playlists(CLIENT_USERNAME)["items"][i]["name"])
 
-print(ids)
-print(names)
-# sp.playlist_add_items(GetPlaylistID(CLIENT_USERNAME, playlist_name = playlist_name), songs)
+def addSongs(songList, playlist_name):
+    try:
+        index = names.index(playlist_name)
+        sp.playlist_add_items
+    except:
+        return("playlist not found")
