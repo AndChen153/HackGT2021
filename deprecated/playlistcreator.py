@@ -110,7 +110,7 @@ class PlaylistCreator():
          )
         response_json = response.json()
         id = response_json["id"]    
-        return id;
+        return id
     def fillPlaylist(self):
         uris = ""
         tracks = self.getSeededTracks()
