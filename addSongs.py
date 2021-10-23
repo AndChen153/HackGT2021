@@ -1,8 +1,5 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-import json
-import requests
-import spotipy.util as util
 
 
 CLIENT_ID = "18e8f7f4ba1c467e9c77afbb34645234"
