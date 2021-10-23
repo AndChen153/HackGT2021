@@ -14,3 +14,8 @@ https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.playlist_upload
 https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.recommendations
 
 https://github.com/plamere/spotipy/issues/493
+
+https://developer.ebay.com/
+https://www.foaas.com/
+https://developers.giphy.com/docs/sdk/
+https://placekeanu.com/
