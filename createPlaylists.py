@@ -24,6 +24,7 @@ names = []
 for i in range(len(sp.user_playlists(CLIENT_USERNAME)["items"])):
     ids.append(sp.user_playlists(CLIENT_USERNAME)["items"][i]["id"])
     names.append(sp.user_playlists(CLIENT_USERNAME)["items"][1]["name"])
-# print(sp.user_playlists(CLIENT_USERNAME)["items"][1]["id"])
 
+print(ids)
+print(names)
 # sp.playlist_add_items(GetPlaylistID(CLIENT_USERNAME, playlist_name = playlist_name), songs)
