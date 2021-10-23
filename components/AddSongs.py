@@ -19,27 +19,16 @@ class AddSongs:
     def __init__(self):
         pass
 
-    def findUserPlaylists(self):
-        ids = []
-        names = []
-        urls = []
-
-        for i in range(len(sp.user_playlists(self.CLIENT_USERNAME)["items"])):
-            ids.append(sp.user_playlists(self.CLIENT_USERNAME)["items"][i]["id"])
-            names.append(sp.user_playlists(self.CLIENT_USERNAME)["items"][i]["name"])
-            urls.append(sp.user_playlists(self.CLIENT_USERNAME)["items"][i]["external_urls"]["spotify"])
-            
-        return ids, names, urls
-
     def addSongList(self, songList, playlist_name, length):
-        ids, names, urls = self.findUserPlaylists()
-        if length < 0:
-            length = 1
-        elif length > 100:
-            length = 100
-        try:
-            index = names.index(playlist_name)
-            sp.playlist_add_items(ids[index], songList[0:length])
-            return("Songs added at " + urls[index])
-        except:
-            return("playlist not found")
+        # len(sp.user_playlists(self.CLIENT_USERNAME)["items"]) - 1
+        playlist_id = sp.user_playlists(self.CLIENT_USERNAME)["items"][0]["id"]
+        playlist_url = sp.user_playlists(self.CLIENT_USERNAME)["items"][0]["external_urls"]["spotify"]
+            
+        # try:
+        print(len(songList))
+        print(songList)
+        sp.playlist_add_items(playlist_id, songList)
+        # return(length + " songs added at " + urls[index])
+        return(playlist_url)
+        # except:
+        #     return("playlist not found")
