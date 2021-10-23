@@ -13,7 +13,7 @@ https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.playlist_reorde
 https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.playlist_upload_cover_image
 https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.recommendations
 
-https://github.com/plamere/spotipy/issues/493
+https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/26/python-virtual-env/
 
 https://developer.ebay.com/
 https://www.foaas.com/
