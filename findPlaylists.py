@@ -4,8 +4,13 @@ import parsePlaylists
 import secrets
 
 
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id= secrets.CLIENT_ID,
-                                                           client_secret= secrets.CLIENT_SECRET))
+
+
+CLIENT_ID = "18e8f7f4ba1c467e9c77afbb34645234"
+CLIENT_SECRET = "be814f3e07234414a23a0c09eb231d07"
+client_credentials_manager = SpotifyClientCredentials(client_id= CLIENT_ID,
+                                                           client_secret=CLIENT_SECRET)
+sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 def findPlaylists(query): 
     results = sp.search(q=query, limit=50, offset=0, type="playlist")
 
@@ -21,6 +26,6 @@ x = parsePlaylists.sortTracks(findPlaylists("hype"))
 
 for i in x:
     if i[1] > 1:
-	    print(i[0])
+	    print(i[0] + " " + str(i[1]))
 
 #print(sp.track(track_id = "7m9OqQk4RVRkw9JJdeAw96"))
