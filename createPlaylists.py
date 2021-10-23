@@ -10,5 +10,5 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope,
                      client_id = CLIENT_ID,
                      client_secret = CLIENT_SECRET,
                      redirect_uri = SPOTIPY_REDIRECT_URI))
-print(sp.user(sp.current_user))
-#sp.user_playlist_create(user = CLIENT_ID, name="playlist1", public = True, collaborative = False, description = "test playlist")
+print(sp.user(sp.me()["id"]))
+sp.user_playlist_create(user = CLIENT_ID, name="playlist1", public = True, collaborative = False, description = "test playlist")
