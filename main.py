@@ -1,24 +1,22 @@
 # main.py "insert query" "insert playlist size"
-
-from components import addSongs, createPlaylist, findPlaylists, parsePlaylists
+from components import AddSongs, CreatePlaylist, FindPlaylists, ParsePlaylists
 import sys
 
-add = addSongs.AddSongs()
-create = createPlaylist.CreatePlaylist()
-find = findPlaylists.FindPlaylists()
-parse = parsePlaylists.ParsePlaylists()
+def callback(key):  
+    add = AddSongs.AddSongs()
+    create = CreatePlaylist.CreatePlaylist()
+    find = FindPlaylists.FindPlaylists()
+    parse = ParsePlaylists.ParsePlaylists()
 
-# query = input("search term: ")
-query = sys.argv[1]
-query = query.lower()
-# playlistSize = int(input("playlist size: "))
-playlistSize = sys.argv[2]
+    query = key
+    query = query.lower()
+    playlistSize = 25
 
 
-create.createPlaylist(query)
-songList = parse.sortTracks(find.findPlaylists(query), playlistSize)
-# print(query, playlistSize)
-print(add.addSongList(songList, query, playlistSize))
+    create.createPlaylist(query)
+    songList = parse.sortTracks(find.findPlaylists(query), playlistSize)
+    return add.addSongList(songList, query, playlistSize)
+  #  urllib.urlopen(add.addSongList(songList, query, playlistSize))
 
 
 
