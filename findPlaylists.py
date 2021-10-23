@@ -16,11 +16,11 @@ def findPlaylists(query):
 
     return track_Ids
 
-x = parsePlaylists.sortTracks(findPlaylists("depression"))
+x = parsePlaylists.sortTracks(findPlaylists("hype"))
 
 
 for i in x:
     if i[1] > 1:
- 	    print(i[0], i[1])
+	    print(i[0])
 
-print(sp.track(track_id = "7m9OqQk4RVRkw9JJdeAw96"))
+#print(sp.track(track_id = "7m9OqQk4RVRkw9JJdeAw96"))
