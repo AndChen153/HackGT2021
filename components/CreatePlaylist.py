@@ -30,8 +30,8 @@ class CreatePlaylist:
         ids, names = self.findUserPlaylists()
 
         try:
-            playlist_name = playlist_name.lower()
-            sp.user_playlist_create(self.CLIENT_USERNAME, name=playlist_name)
+            
+            sp.user_playlist_create(self.CLIENT_USERNAME, playlist_name)
             return(playlist_name + " was succesfully created as a playlist.")
         except:
             return("Playlist could not be created, try again later.")
