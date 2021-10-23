@@ -1,18 +1,15 @@
-import spotipy
-from spotipy.oauth2 import SpotifyOAuth
-import spotipy.util as util
-import secrets
-import parsePlaylists
+from components import addSongs, createPlaylist, findPlaylists, parsePlaylists
+
+add = addSongs.AddSongs()
+create = createPlaylist.CreatePlaylist()
+find = findPlaylists.FindPlaylists()
+parse = parsePlaylists.ParsePlaylists()
+
+while (True):
+    query = input("search term: ")
+    playlistSize = int(input("playlist size: "))
+    create.createPlaylist(query)
+    songList = parse.sortTracks(find.findPlaylists(query))
+    print(add.addSongList(songList, query))
 
 
-scope = "playlist-modify-public"
-SPOTIPY_REDIRECT_URI = 'http://localhost/'
-
-
-token = util.prompt_for_user_token(secrets.CLIENT_USERNAME,
-                                   scope,
-                                   client_id=secrets.CLIENT_ID,
-                                   client_secret=secrets.CLIENT_SECRET,
-                                   redirect_uri=secrets.SPOTIPY_REDIRECT_URI) 
-                                   
-sp = spotipy.Spotify(auth=token)
