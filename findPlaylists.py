@@ -13,7 +13,7 @@ results = sp.search(q='ariana grande', limit=30, offset=0, type="playlist")
 track_Ids = []
 
 for track in results['playlists']['items']:
-    #print(track['id'], track['name'], track['external_urls']['spotify'])
+    print(track['id'], track['name'], track['external_urls']['spotify'])
     track_Ids.append(track['id'])
 
 print(track_Ids)
