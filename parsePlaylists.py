@@ -1,18 +1,15 @@
-from logging import NullHandler
-from spotipy.oauth2 import SpotifyClientCredentials
-import secrets
 import spotipy
-import json
+from spotipy.oauth2 import SpotifyOAuth
+import spotipy.util as util
+import secrets
+import parsePlaylists
 
+scope = "playlist-modify-public"
+SPOTIPY_REDIRECT_URI = 'http://localhost/'
 
-CLIENT_ID = "18e8f7f4ba1c467e9c77afbb34645234"
-CLIENT_SECRET = "be814f3e07234414a23a0c09eb231d07"
-client_credentials_manager = SpotifyClientCredentials(client_id= CLIENT_ID,
-                                                           client_secret=CLIENT_SECRET)
-sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
+token = util.prompt_for_user_token(secrets.CLIENT_USERNAME,scope,client_id=secrets.CLIENT_ID,client_secret=secrets.CLIENT_SECRET,redirect_uri=SPOTIPY_REDIRECT_URI) 
+sp = spotipy.Spotify(auth=token)
 
-playlist_id = 'spotify:user:spotifycharts:playlist:37i9dQZEVXbJiZcmkrIHGU'
-results = sp.playlist(playlist_id)
 def getTracks(pl_ids): 
     offset = 0
     track_dict = {}
@@ -36,6 +33,7 @@ def getTracks(pl_ids):
             offset = offset + len(response['items'])
     return track_dict;
 
+# returns sorted dictionary by frequency with key as song id and value as frequency
 def sortTracks(playlists):
     tracks = getTracks(playlists)
     sortedTracks = sorted(tracks.items(), key=lambda x: x[1], reverse=True)

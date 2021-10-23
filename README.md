@@ -19,3 +19,6 @@ https://developer.ebay.com/
 https://www.foaas.com/
 https://developers.giphy.com/docs/sdk/
 https://placekeanu.com/
+
+https://stmorse.github.io/journal/spotify-api.html
+https://towardsdatascience.com/using-python-to-create-spotify-playlists-of-the-samples-on-an-album-e3f20187ee5e
