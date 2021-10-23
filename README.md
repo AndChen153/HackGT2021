@@ -12,3 +12,5 @@ https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.playlist_remove
 https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.playlist_reorder_items
 https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.playlist_upload_cover_image
 https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.recommendations
+
+https://github.com/plamere/spotipy/issues/493
