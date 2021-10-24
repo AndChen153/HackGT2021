@@ -15,9 +15,9 @@
             background-image: url('/static/images/Background.png')
         }
         div.query {
-            position: relative;
-            left: 830px;
-            top: 513px;
+            position: absolute;
+            left: 490%;
+            top: 580%;
         }
         div.submit {
             position: relative;
@@ -26,16 +26,16 @@
         }
         div.numbers {
             position: relative;
-            left: 1320px;
-            top: 590px;
+            left: 1070px;
+            top: 560px;
         }
     </style>
 
     <body>
      <form method="POST">
         <div class="query"><input type="text" id="search-bar" name="playName" placeholder="Search"/></div>
-        <div class="submit"><input type="submit" value="GO"></div>
-        <input type="text" id="number-bar" name="playLen" placeholder="# of songs"/>
+        <div class="submit"><input type="image" src="static/images/Search.png" width="70px"/></div>
+        <div class="numbers"><input type="text" id="number-bar" name="playLen" placeholder="# of songs"/></div>
         
     </form>
     </body>
