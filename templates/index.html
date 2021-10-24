@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SEARCHIFY</title>
+        <title>Searchify</title>
         <link rel="stylesheet" href="{{ url_for('static', type='text/css', filename='style.css')}}">
         <link rel="import" href="https://fonts.googleapis.com/css?family=Comfortaa">
     </head>
     <style>
-        body{
+        /* body{
             position: fixed; 
             overflow-y: hidden;
             background-attachment: fixed;
@@ -22,7 +22,7 @@
             border-left-style: hidden;
             border-bottom-style: hidden;
             background-color: transparent;   
-            outline: none
+            outline: none;
         }
         div.query {
             position: relative;
@@ -38,16 +38,101 @@
             position: relative;
             left: 1080px;
             top: 567px;
+        } */
+
+    /* </style>
+
+    <body>
+
+        <form method="POST" id="search">
+        <div class="query"><input style="font-size:30px;" type="text" autocomplete="off" id="search-bar" name="playName" placeholder="Search" size="19"/></div>
+        <div class="numbers"><input style="font-size:20px;" type="text" autocomplete="off" id="number-bar" name="playLen" placeholder="# of songs" size="5"/></div>
+        <div class="submit"><input type="image" src="static/images/Search.png" width="67px"/></div>
+         */
+        html{
+          height: 100%;
         }
+        body {
+          margin: 0;
+          min-height: 100%;
+          background-color: #455fa9;
+          background-image: url("static/images/Background1.png");
+          background-size: 1579px 888px;
+        }
+
+        ::placeholder {
+          color: #3ec15b;
+          font-size: 100%;
+        }
+        
+        #search-bar:hover,
+        #search-bar:focus {
+          box-shadow: 0px 0px 5px #C2C2C2;
+          background-color: white;
+          outline: none;
+        }
+        
+        #search-bar {
+          position: absolute;
+          bottom: 36%;
+          left: 54%;
+          border-radius: 1000px;
+          border: 0px solid;
+          width: 40%;
+          height: 5%;
+          padding-left: 25px;
+          padding-top: 2%;
+          padding-bottom: 2%;
+          font-family: 'Arial', sans-serif;
+          font-weight: 700;
+          margin: auto;
+          font-size: 200%;
+        }
+
+        #number-bar {
+          position: absolute;
+          bottom: 25%;
+          left: 78%;
+          border-radius: 1000px;
+          border: 0px solid;
+          width: 16%;
+          height: 2%;
+          padding-left: 25px;
+          padding-top: 2%;
+          padding-bottom: 2%;
+          font-family: 'Arial', sans-serif;
+          font-weight: 700;
+          margin: auto;
+          font-size: 150%;
+        }
+
+        #search-icon {
+          position: absolute;
+          width: 5%;
+          bottom: 38%;
+          left: 88%;
+        }
+
+        #label {
+          position: absolute;
+          width: 25%;
+          min-width: 160px;
+          bottom: 25%;
+          left: 55%;
+        }
+
     </style>
 
     <body>
      <form method="POST">
-        <div class="query"><input style="font-size:30px;" type="text" autocomplete="off" id="search-bar" name="playName" placeholder="Search" size="19"/></div>
-        <div class="numbers"><input style="font-size:20px;" type="text" autocomplete="off" id="number-bar" name="playLen" placeholder="# of songs" size="5"/></div>
-        <div class="submit"><input type="image" src="static/images/Search.png" width="67px"/></div>
-        
-        
+        <img src="static/images/4.png" id = "label"/>
+        <div id="query">
+          <input type="text" autocomplete="off" id="search-bar" name="playName" placeholder="Search" left="55%"  bottom="37%" font-size="150%"/>
+          <input type="image" src="static/images/Search.png" id="search-icon"/>
+        </div>
+        <div class="numbers">
+          <input type="text" autocomplete="off" id="number-bar" name="playLen" placeholder="# of songs"/>
+        </div>
     </form>
     </body>
 </html>
