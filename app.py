@@ -16,6 +16,7 @@ def searchify_results():
     global link
     playName = request.form['playName']
     playLen = request.form['playLen']
+<<<<<<< HEAD
     link = str(main.createPlaylist(playName, playLen))
     return redirect(url_for("link_share"))
 
@@ -24,6 +25,14 @@ def link_share():
     global link
     webbrowser.open_new_tab(link)
     return redirect(url_for("searchify"))
+=======
+    return main.createPlaylist(playName, playLen)
+    # return redirect(url_for("searchify"))
+
+# @app.route('/results')
+# def link_share():
+#     return render_template('')
+>>>>>>> 700c6fa90cbe509bf46619506fbd80d63288defb
 
 if __name__ == "__main__":
     app.run()
