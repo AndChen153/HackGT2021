@@ -1,15 +1,6 @@
 secrets.py
 *.cache
 /env
-secrets.py
-*.cache
-/env
-*.cache-18xwy2dfk7j0v61oyhj9b8csa
 /venv
-/HackGTHostEnv
 *.cache-18xwy2dfk7j0v61oyhj9b8csa
-/venv
 /HackGTHostEnv
-/env1
-/HackGTHostEnv
-*.cache-18xwy2dfk7j0v61oyhj9b8csa
