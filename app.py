@@ -4,9 +4,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def searchify():
-    return render_template('main.html')
+    return render_template('index.html')
 
 @app.route('/', methods=['POST'])
 def searchify_results():
-    text = request.form['text']
-    return main.callback(text)
+    playName = request.form['playName']
+    playLen = request.form['playLen']
+    return main.createPlaylist(playName, playLen)
+
+if __name__ == "__main__":
+    app.run()

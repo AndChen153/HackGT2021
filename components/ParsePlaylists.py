@@ -29,9 +29,6 @@ class ParsePlaylists:
         for pl_id in pl_ids:
             follows = sp.playlist(pl_id, fields="followers")
             #print(follows['followers']['total'])
-            
-
-
             offset = 0
             response = sp.playlist_items(pl_id,
                                     offset=offset,
