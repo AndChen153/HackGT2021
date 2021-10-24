@@ -31,7 +31,7 @@ class AddSongs:
             
         # try:
        # print(len(songList))
-       # print(songList)
+        #print(sp.playlist(playlist_id)["name"])
         sp.playlist_add_items(playlist_id, songList)
         # return(length + " songs added at " + urls[index])
         return(playlist_url)

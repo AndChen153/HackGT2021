@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 import main
-app = Flask(__name__)
+# app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')  
 
 @app.route('/')
 def searchify():
