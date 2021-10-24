@@ -1,4 +1,6 @@
 import webbrowser
+import os
+
 
 def printLink(url):
-    webbrowser.open(url, 0)
+    os.system("start \"\" " + url)
