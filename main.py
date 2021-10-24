@@ -14,8 +14,8 @@ def createPlaylist(key, playlistSize):
 
     create.createPlaylist(query)
     songList = parse.sortTracks(find.findPlaylists(query), playlistSize)
-    webbrowser.open(add.addSongList(songList, query, playlistSize))
-    return "Your content has been loaded on a new page"
+    #webbrowser.open(add.addSongList(songList, query, playlistSize))
+    return (add.addSongList(songList, query, playlistSize))
   #  urllib.urlopen(add.addSongList(songList, query, playlistSize))
 
 # createPlaylist("hype", 50)
