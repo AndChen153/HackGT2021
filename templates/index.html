@@ -1,41 +1,52 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html>
     <head>
         <title>SEARCHIFY</title>
         <link rel="stylesheet" href="{{ url_for('static', type='text/css', filename='style.css')}}">
+        <link rel="import" href="https://fonts.googleapis.com/css?family=Comfortaa">
     </head>
     <style>
         body{
             position: fixed; 
-            overflow-y: scroll;
+            overflow-y: hidden;
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-image: url('/static/images/Background.png')
+            
+        }
+        input {
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: hidden;
+            background-color: transparent;   
+            outline: none
         }
         div.query {
-            position: absolute;
-            left: 490%;
-            top: 580%;
+            position: relative;
+            left: 847px;
+            top: 507px;            
         }
         div.submit {
             position: relative;
             left: 1220px;
-            top: 490px;
+            top: 435px;
         }
         div.numbers {
             position: relative;
-            left: 1070px;
-            top: 560px;
+            left: 1080px;
+            top: 567px;
         }
     </style>
 
     <body>
      <form method="POST">
-        <div class="query"><input type="text" id="search-bar" name="playName" placeholder="Search"/></div>
-        <div class="submit"><input type="image" src="static/images/Search.png" width="70px"/></div>
-        <div class="numbers"><input type="text" id="number-bar" name="playLen" placeholder="# of songs"/></div>
+        <div class="query"><input style="font-size:30px;" type="text" autocomplete="off" id="search-bar" name="playName" placeholder="Search" size="19"/></div>
+        <div class="numbers"><input style="font-size:20px;" type="text" autocomplete="off" id="number-bar" name="playLen" placeholder="# of songs" size="5"/></div>
+        <div class="submit"><input type="image" src="static/images/Search.png" width="67px"/></div>
+        
         
     </form>
     </body>

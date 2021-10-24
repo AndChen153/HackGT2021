@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 import main
 # app = Flask(__name__)
 app = Flask(__name__, static_url_path='/static')  
@@ -11,7 +11,8 @@ def searchify():
 def searchify_results():
     playName = request.form['playName']
     playLen = request.form['playLen']
-    return main.createPlaylist(playName, playLen)
+    main.createPlaylist(playName, playLen)
+    return redirect(url_for("searchify"))
 
 if __name__ == "__main__":
     app.run()

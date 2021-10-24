@@ -1,6 +1,7 @@
 # main.py "insert query" "insert playlist size"
 from components import AddSongs, CreatePlaylist, FindPlaylists, ParsePlaylists
 import sys
+import webbrowser
 
 def createPlaylist(key, playlistSize):  
     add = AddSongs.AddSongs()
@@ -13,7 +14,8 @@ def createPlaylist(key, playlistSize):
 
     create.createPlaylist(query)
     songList = parse.sortTracks(find.findPlaylists(query), playlistSize)
-    return add.addSongList(songList, query, playlistSize)
+    webbrowser.open(add.addSongList(songList, query, playlistSize))
+    return "Your content has been loaded on a new page"
   #  urllib.urlopen(add.addSongList(songList, query, playlistSize))
 
 # createPlaylist("hype", 50)

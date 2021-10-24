@@ -1,5 +1,0 @@
-CLIENT_ID = "18e8f7f4ba1c467e9c77afbb34645234"
-CLIENT_SECRET = "a520af0b1e0a479d965e45fd115cf1fe"
-CLIENT_USERNAME = "18xwy2dfk7j0v61oyhj9b8csa"
-SPOTIPY_REDIRECT_URI = "http://localhost:8080"
-SCOPE = "playlist-modify-public"
