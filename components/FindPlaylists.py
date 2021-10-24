@@ -16,7 +16,7 @@ class FindPlaylists:
         pass
 
     def findPlaylists(self,query): 
-        results = sp.search(q=query, limit=50, offset=0, type="playlist")
+        results = sp.search(q=query, limit=20, offset=0, type="playlist")
 
         track_Ids = []
 
