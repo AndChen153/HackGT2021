@@ -11,8 +11,12 @@ def searchify():
 def searchify_results():
     playName = request.form['playName']
     playLen = request.form['playLen']
-    main.createPlaylist(playName, playLen)
-    return redirect(url_for("searchify"))
+    return main.createPlaylist(playName, playLen)
+    # return redirect(url_for("searchify"))
+
+# @app.route('/results')
+# def link_share():
+#     return render_template('')
 
 if __name__ == "__main__":
     app.run()

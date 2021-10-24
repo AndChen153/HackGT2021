@@ -1,4 +1,6 @@
 secrets.py
 *.cache
 /env
+/env1
+/HackGTHostEnv
 *.cache-18xwy2dfk7j0v61oyhj9b8csa
