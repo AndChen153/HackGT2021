@@ -7,6 +7,7 @@
         <link rel="import" href="https://fonts.googleapis.com/css?family=Comfortaa">
     </head>
     <style>
+<<<<<<< HEAD
         
         html{
           height: 100%;
@@ -83,14 +84,144 @@
     </style>
 
     <body>
+=======
+        /* body{
+            position: fixed; 
+            overflow-y: hidden;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-image: url('/static/images/Background.png')
+            
+        }
+        input {
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: hidden;
+            background-color: transparent;   
+            outline: none;
+        }
+        div.query {
+            position: relative;
+            left: 847px;
+            top: 507px;            
+        }
+        div.submit {
+            position: relative;
+            left: 1220px;
+            top: 435px;
+        }
+        div.numbers {
+            position: relative;
+            left: 1080px;
+            top: 567px;
+        } */
+
+    /* </style>
+
+    <body>
+<<<<<<< HEAD
+
+        <form method="POST" id="search">
+=======
+     <form method="POST" id="search">
+>>>>>>> 700c6fa90cbe509bf46619506fbd80d63288defb
+        <div class="query"><input style="font-size:30px;" type="text" autocomplete="off" id="search-bar" name="playName" placeholder="Search" size="19"/></div>
+        <div class="numbers"><input style="font-size:20px;" type="text" autocomplete="off" id="number-bar" name="playLen" placeholder="# of songs" size="5"/></div>
+        <div class="submit"><input type="image" src="static/images/Search.png" width="67px"/></div>
+         */
+        html{
+          height: 100%;
+        }
+        body {
+          margin: 0;
+          min-height: 100%;
+          background-color: #455fa9;
+          background-image: url("static/images/Background1.png");
+          background-size: 1579px 888px;
+        }
+
+        ::placeholder {
+          color: #3ec15b;
+          font-size: 100%;
+        }
+        
+        #search-bar:hover,
+        #search-bar:focus {
+          box-shadow: 0px 0px 5px #C2C2C2;
+          background-color: white;
+          outline: none;
+        }
+        
+        #search-bar {
+          position: absolute;
+          bottom: 36%;
+          left: 54%;
+          border-radius: 1000px;
+          border: 0px solid;
+          width: 40%;
+          height: 5%;
+          padding-left: 25px;
+          padding-top: 2%;
+          padding-bottom: 2%;
+          font-family: 'Arial', sans-serif;
+          font-weight: 700;
+          margin: auto;
+          font-size: 200%;
+        }
+
+        #number-bar {
+          position: absolute;
+          bottom: 25%;
+          left: 78%;
+          border-radius: 1000px;
+          border: 0px solid;
+          width: 16%;
+          height: 2%;
+          padding-left: 25px;
+          padding-top: 2%;
+          padding-bottom: 2%;
+          font-family: 'Arial', sans-serif;
+          font-weight: 700;
+          margin: auto;
+          font-size: 150%;
+        }
+
+        #search-icon {
+          position: absolute;
+          width: 5%;
+          bottom: 38%;
+          left: 88%;
+        }
+
+        #label {
+          position: absolute;
+          width: 25%;
+          min-width: 160px;
+          bottom: 25%;
+          left: 55%;
+        }
+
+    </style>
+
+    <body>
+>>>>>>> 83b8fd649927745cad5907cad74f3617cf8bf970
      <form method="POST">
         <img src="static/images/4.png" id = "label"/>
         <div id="query">
           <input type="text" autocomplete="off" id="search-bar" name="playName" placeholder="Search" left="55%"  bottom="37%" font-size="150%"/>
+<<<<<<< HEAD
           <input type="text" autocomplete="off" id="number-bar" name="playLen" placeholder="# of songs"/>
         </div>
         <div class="numbers">
             <input type="image" src="static/images/Search.png" id="search-icon"/>
+=======
+          <input type="image" src="static/images/Search.png" id="search-icon"/>
+        </div>
+        <div class="numbers">
+          <input type="text" autocomplete="off" id="number-bar" name="playLen" placeholder="# of songs"/>
+>>>>>>> 83b8fd649927745cad5907cad74f3617cf8bf970
         </div>
     </form>
     </body>

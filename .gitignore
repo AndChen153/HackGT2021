@@ -1,6 +1,7 @@
 secrets.py
 *.cache
 /env
+<<<<<<< HEAD
 *.cache-18xwy2dfk7j0v61oyhj9b8csa
 secrets.py
 *.cache
@@ -8,3 +9,14 @@ secrets.py
 *.cache-18xwy2dfk7j0v61oyhj9b8csa
 /venv
 /HackGTHostEnv
+=======
+<<<<<<< HEAD
+*.cache-18xwy2dfk7j0v61oyhj9b8csa
+/venv
+/HackGTHostEnv
+=======
+/env1
+/HackGTHostEnv
+*.cache-18xwy2dfk7j0v61oyhj9b8csa
+>>>>>>> 700c6fa90cbe509bf46619506fbd80d63288defb
+>>>>>>> 83b8fd649927745cad5907cad74f3617cf8bf970
