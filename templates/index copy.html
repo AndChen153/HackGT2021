@@ -6,6 +6,12 @@
         <!-- <link rel="stylesheet" href="{{ url_for('static', type='text/css', filename='style.css')}}"> -->
         <!-- <link rel="import" href="https://fonts.googleapis.com/css?family=Comfortaa"> -->
     </head>
+    
+    <script>
+      const data = {{ data }};
+      alert(data);
+      </script>
+      
     <style>
         
         html{
@@ -80,21 +86,22 @@
           left: 50%;
         }
 
+        #link {
+          position: absolute;
+          bottom: 20%;
+          left:50%
+        }
+
+
+
 
     </style>
-<script type="text/javascript">
-  function load(param1)
-  {
-  window.location.href = param1;
 
-  }
-  </script>
+  
 
 
-  <script type="text/javascript">
-  </script>
-    <body onclick="load({{content}})">
-     
+    <body>
+      
      <form method="POST">
         <img src="static/images/4.png" id = "label"/>
         <div id="query">
@@ -104,6 +111,8 @@
         <div class="numbers">
             <input type="image" src="static/images/Search.png" id="search-icon"/>
         </div>
+
+        <a target="_self" href={{data}} >Your Spotify Link</a>
     </form>
     </body>
 </html>
