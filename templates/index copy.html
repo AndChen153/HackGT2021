@@ -82,11 +82,19 @@
 
 
     </style>
+<script type="text/javascript">
+  function load(param1)
+  {
+  window.location.href = param1;
+
+  }
+  </script>
 
 
   <script type="text/javascript">
   </script>
-    <body>
+    <body onclick="load({{content}})">
+     
      <form method="POST">
         <img src="static/images/4.png" id = "label"/>
         <div id="query">

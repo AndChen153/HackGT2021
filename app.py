@@ -23,7 +23,8 @@ def searchify_results():
 def link_share():
     global link
     webbrowser.open_new_tab(link)
-    return redirect(url_for("searchify"))
+    return render_template('index.html', context=link)
+    # return redirect(url_for("searchify"))
 
 if __name__ == "__main__":
     app.run()
