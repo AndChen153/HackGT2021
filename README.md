@@ -1,6 +1,8 @@
 # HackGT2021
 Spotify Playlist Maker
 
+https://youtu.be/IvKXBUxz5ZM
+
 Designed for HackGT 2021 hackathon. It searches input term for playlists of the same topic. Sorts the songs based off of the number of times the songs appears. Then it applies a mulitplier based off of how popular the playlist each song appears in is. Multiplier ranges from 1-10 and is based off of the follower count graphed in a log function. 
 
 
